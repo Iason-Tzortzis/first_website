@@ -134,7 +134,7 @@
 	-webkit-background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
-	height: 70vh;
+	height: 100vh;
 }
 #parallax-container .parallax-two {
 	padding-top: 200px;
@@ -306,10 +306,11 @@ body {
     
   }
 
-  .card{
+.card{
     
     box-shadow: 0.25em 0.25em 2em rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    border: none;
   }
   
   h1:before  {  
@@ -329,6 +330,105 @@ body {
   }
 
   .big-section{
-      height: 130vh;
+      height: auto;
       background-color: #FFC444;
+  }
+
+  #moving{
+      font-size: 3rem!important;
+  }
+
+  #card-body{
+      background-color:#FFC444;
+  }
+
+  @-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  -moz-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	40% {
+	  -moz-transform: translateY(-15px);
+	  transform: translateY(-15px);
+	}
+	60% {
+	  -moz-transform: translateY(-15px);
+	  transform: translateY(-15px);
+	}
+  }
+  @-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  -webkit-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	40% {
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+	60% {
+	  -webkit-transform: translateY(-15px);
+	  transform: translateY(-15px);
+	}
+  }
+  @keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  -moz-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  -webkit-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	40% {
+	  -moz-transform: translateY(-30px);
+	  -ms-transform: translateY(-30px);
+	  -webkit-transform: translateY(-30px);
+	  transform: translateY(-30px);
+	}
+	60% {
+	  -moz-transform: translateY(-15px);
+	  -ms-transform: translateY(-15px);
+	  -webkit-transform: translateY(-15px);
+	  transform: translateY(-15px);
+	}
+  }
+  
+ 
+  #arrow-down {
+	display: block;
+	animation: fadeIn 4s;
+	color: #fff;
+	transform: translateY(-140px);
+	cursor: pointer;
+  }
+  .arrow {
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	height: 60px; /*change with size of arrow to make sit on bottom */
+  /*   background-image: url(); */
+  /*   background-size: contain; */
+  }
+  
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+  .bounce {
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2.35s infinite;
+  }
+
+  @media screen and (max-width: 1050px){
+    /* Styles that apply to screen sizes from 0 to 1050 pixels in width */
+    #arrow-down{
+		display: none;
+	}
+	
+  }
+
+  #footer{
+color: #FFFFFFDF;
   }
