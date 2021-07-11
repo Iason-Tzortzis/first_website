@@ -18,9 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
 
 
 </head>
@@ -36,12 +40,40 @@
                 </div>
             </div>
         </section>
-        <div class="middle">
+        <div class="middle sticky-top">
             <h1 id="h1" class="ml-5 pl-5 pt-2">AVDK.NET</h1>
         </div>
+
         <section>
 
-            <div class="container mt-5 mb-5">
+
+            <div class="container">
+                <h2 class="text-center mt-5">My Sponsors</h2>
+                <section class="customer-logos slider pt-5">
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+                    <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+                    <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg">
+                    </div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg">
+                    </div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg">
+                    </div>
+                    <div class="slide"><img
+                            src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg">
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section>
+
+            <div class="container mt-5 mb-5 pt-5 mt-5">
                 <div class="card" id="main_card">
                     <div class="card-body p-3">
 
@@ -78,10 +110,10 @@
         </section>
         <section class="big-section">
             <h1 class="text-center pt-5" id="moving">MOVING ON</h1>
-            <div class="container-fluid pt-5">
+            <div class="container pt-5">
 
                 <div class="row">
-                    <div class="col-sm col-md-6 col-lg-4">
+                    <div class="col-lg">
                         <div class="card mb-4">
                             <img src="/images/shoe.png" class="card-img-top" alt="...">
                             <div class="card-body" id="card-body">
@@ -125,30 +157,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm col-md-6 col-lg-4">
-                        <div class="card mb-4">
-                            <img src="/images/shoe.png" class="card-img-top" alt="...">
-                            <div class="card-body" id="card-body">
-                                <div class="container width-60">
-                                    <h1 class="card-title mb-2">AVDK.NET</h1>
-                                    <p>
 
-                                        <br>
-                                        Sinds 2021 is AVDK.NET in zee gegaan met de 2 fascinerende, hoog kwalitatieve en
-                                        ruimdenkende Griekse premium merken alias bedrijven Chaniotakis SA en Ioanna
-                                        Kourbela.<br>
-                                        <br>
-                                        Ondanks de moeilijke tijden zijn we gemotiveerd om niet pessimistisch te worden,
-                                        vastbesloten om door te gaan en in het nieuwe digitaliseringstijdperk als
-                                        winnaar over de brug te komen.<br>
-                                        <br>
-                                        Help je ons mee?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm col-md-6 col-lg-4">
+                    <div class="col-lg">
                         <div class="card mb-4">
                             <img src="/images/shoe.png" class="card-img-top" alt="...">
                             <div class="card-body" id="card-body">
@@ -189,8 +199,8 @@
                     </div>
                 </div>
         </section>
-        <section class="mt-5 mb-4">
-            <div class="container">
+        <section class="mt-5 mb-5">
+            <div class="container ">
                 <div class="row">
                     <div class="col-lg">
                         <div class="card mb-2">
@@ -230,7 +240,33 @@
         <script src="/scripts/socialClick.js"></script>
         <script src="/scripts/homeArrow.js"></script>
         <script src="/scripts/homeArrowScrollLogic.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        </script>
         <%- include('./partials/footer')%>
+
+
 </body>
 <style>
     #last-photo {
