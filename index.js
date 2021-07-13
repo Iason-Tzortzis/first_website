@@ -1,8 +1,15 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const ejsMate = require('ejs-mate');
 const ExpressError = require('./utils/ExpressError');
+const nodemailer = require("nodemailer");
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
@@ -20,6 +27,32 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body)
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.USER,
+            pass: process.env.PASSWORD
+        }
+    })
+
+    const mailOptions = {
+        from: req.body.email,
+        to: process.env.USER,
+        subject: `Message from ${req.body.email}: ${req.body.subject}`,
+        text: req.body.message
+
+    }
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.send('error')
+        } else {
+            console.log('Email Sent' + info.response)
+            res.send('success')
+        }
+    })
 })
 
 
