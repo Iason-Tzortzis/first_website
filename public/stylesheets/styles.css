@@ -640,4 +640,81 @@ color: #FFFFFFDF;
     }
   }
   
+  #special-card .card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+#special-card .card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+}
+  
+#icons .social-icon {
+	height: 70px;
+	width: 70px!important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 27px;
+	margin-right: 11px;
+	cursor: pointer;
+}
+
+#icons .social-twitter {
+	background-color: #55acee;
+}
+
+#icons .social-facebook {
+	background-color: #3b5999;
+}
+
+#icons .social-linkedin {
+	background-color: #0077b5;
+}
+
+#icons .social-google {
+	background-color: #dd4b39;
+}
+
+#icons .social-instagram {
+	background-color: #dd4b39;
+}
+#icons .social-whatsapp {
+	background-color: #25D366;
+}
+
+#icons .social-icon i {
+	transition: 0.4s all;
+}
+
+#icons .social-icon:hover i {
+	transform: scale(1.4);
+}
+  
+
+.img-btn img{
+	width:70px;
+	height:40px;
+  }
+  .img-btn > input{
+	display:none
+  }
+  .img-btn > img{
+	cursor:pointer;
+	border:5px solid transparent;
+  }
+  
+  
   
