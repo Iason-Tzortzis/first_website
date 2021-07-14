@@ -127,7 +127,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	background-image: url(/images/logo.png);
+	background-image: url(/images/logo_v2.png);
 	background-attachment: fixed;
 	background-size: cover;
 	-moz-background-size: cover;
@@ -395,7 +395,7 @@ body {
   #arrow-down {
 	display: block;
 	animation: fadeIn 4s;
-	color: #fff;
+	color: #343A40;
 	transform: translateY(-140px);
 	cursor: pointer;
   }
@@ -677,7 +677,7 @@ color: #FFFFFFDF;
 }
 
 #icons .social-facebook {
-	background-color: #3b5999;
+	background-color: #343A40;
 }
 
 #icons .social-linkedin {
@@ -689,7 +689,7 @@ color: #FFFFFFDF;
 }
 
 #icons .social-instagram {
-	background-color: #dd4b39;
+	background-color: #343A40;
 }
 #icons .social-whatsapp {
 	background-color: #25D366;
@@ -716,5 +716,6 @@ color: #FFFFFFDF;
 	border:5px solid transparent;
   }
   
+
   
   
